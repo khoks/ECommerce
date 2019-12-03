@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="main.js" type="text/javascript"></script>
+        <style>
+            ul{
+            display: flex;
+            list-style-type:none;
+            padding: 10px;
+            border: ridge;
+            border-color: red;
+            margin: 0px;
+            }
+
+            li{
+            padding: 10px;
+            border: outset;
+            border-color: salmon;
+            }
+
+            td,tr{
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body onload="searchProducts();">
+        
+        <br/>
+        <div style="float: left; width: 100%; border: double;border-color: darkslateblue;">
+            <label>Product Name</label>
+            <input style="border:inset;" type="text" id="name"></input>
+            <label>Product Description</label>
+            <input style="border:inset;" type="text" id="description"></input>
+            <label>Product Category</label>
+            <input style="border:inset;" type="text" id="category" value="Kitchen"></input>
+            <label>Product Price $</label>
+            <input style="border:inset;" type="text" id="price"></input>
+            <input style="width:400px; height: 50px; border-color: black;" type="button" name="Search for products" value="Search for products" onclick="searchProducts();"></button>
+        </div>
+        <br/>
+        &nbsp;
+        <br/>
+        <div>
+            <label style="float: left;">Enter Custom Search field name to Search</label>
+            <input style="float: left; border:inset;"type="text" id="customfieldKey"></input>
+            <label style="float: left;">Enter Custom Search field value to Search</label>
+            <input style="float: left; border:inset;" type="text" id="customfieldValue"></input>
+            
+        </div>
+        <br/>
+        &nbsp;
+        <br/>
+        <div style="float: left; width: 100%;" id="productSearchResponse"></div>
+        <br/>
+        &nbsp;
+        <br/>
+        <div id="pagebar"></div>
+    </body>
+</html>
